@@ -1,6 +1,5 @@
 
-@@ -1 +1,32 @@
-# Write your code here. 	# Write your code here.
+
 katz_deli = []
 
 def line(line)
