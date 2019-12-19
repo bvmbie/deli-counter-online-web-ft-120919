@@ -1,22 +1,34 @@
+
+@@ -1 +1,32 @@
+# Write your code here. 	# Write your code here.
 katz_deli = []
 
-def line 
-  case katz_deli.length
-  when 0
-    "The line is currently empty."
-  else 
-    "The line is currently "
-end
-
-def take_a_number(deli_line, name)
-  deli_line = katz_deli
-  puts "Welcome #{name} you are number #{deli_line.length+1} in line."
-end
-
-def now_serving
-  if katz_deli.length == 0
-    "There is nobody waiting to be served!"
+def line(line)
+  if line.size == 0
+    puts "The line is currently empty."
   else
-    "Currently serving #{katz_deli[0]}"
-    katz_deli.shift
+    output = "The line is currently: "
+    count = 0
+    line.each do |person|
+      count += 1
+      output += "#{count}. #{person}"
+      output += " " if count != line.size
+    end
+    puts output
+    output
+  end
+end
+
+def take_a_number(line, person)
+  puts "Welcome, #{person}. You are number #{line.size + 1} in line."
+  line << person
+end
+
+def now_serving(line)
+  if line.size == 0
+    puts "There is nobody waiting to be served!"
+  else
+    puts "Currently serving #{line.shift}."
+    line
+  end
 end
