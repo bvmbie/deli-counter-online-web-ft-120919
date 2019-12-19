@@ -5,18 +5,18 @@ def line
   when 0
     "The line is currently empty."
   else 
-    "#{katz_deli.length}"
+    "The line is currently "
 end
 
 def take_a_number(deli_line, name)
   deli_line = katz_deli
-  puts "#{name} you are #{deli_line.length+1} in line."
+  puts "Welcome #{name} you are number #{deli_line.length+1} in line."
 end
 
 def now_serving
   if katz_deli.length == 0
     "There is nobody waiting to be served!"
   else
-    "#{katz_deli[0]}"
+    "Currently serving #{katz_deli[0]}"
     katz_deli.shift
 end
