@@ -14,5 +14,9 @@ def take_a_number(deli_line, name)
 end
 
 def now_serving
-  puts #{katz_deli[0]} 
-  
+  if katz_deli.length == 0
+    "There is nobody waiting to be served!"
+  else
+    "#{katz_deli[0]}"
+    katz_deli.shift
+end
